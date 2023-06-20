@@ -1,0 +1,31 @@
+@mixin mp($margin: 0, $padding: 0) {
+	margin: $margin;
+	padding: $padding;
+}
+
+@mixin size($width: auto, $height: auto) {
+	width: $width;
+	height: $height;
+}
+
+@mixin square($length: auto) {
+	width: $length;
+	height: $length;
+}
+
+@mixin flex($main: center, $cross: center) {
+	display: flex;
+	justify-content: $main;
+	align-items: $cross;
+}
+
+@mixin inset($offset) {
+	top: $offset;
+	right: $offset;
+	bottom: $offset;
+	left: $offset;
+}
+
+@mixin inset-border($border-width, $border-color) {
+	box-shadow: inset 0 0 0 $border-width $border-color;
+}
