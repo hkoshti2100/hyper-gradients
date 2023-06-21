@@ -3,4 +3,5 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 	@include mp();
+	font-family: var(--font-primary);
 }

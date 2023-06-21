@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin mp($margin: 0, $padding: 0) {
 	margin: $margin;
 	padding: $padding;
@@ -28,4 +30,8 @@
 
 @mixin inset-border($border-width, $border-color) {
 	box-shadow: inset 0 0 0 $border-width $border-color;
+}
+
+@function rem($pixel-value) {
+	@return math.div($pixel-value * 0.0625rem, 1px);
 }

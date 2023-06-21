@@ -1,0 +1,15 @@
+@use "mixins" as *;
+
+.container-main {
+	width: min(1440px, 90%);
+	margin: 0 auto;
+}
+
+.no-form {
+	border: 0;
+	background-color: transparent;
+}
+
+.flex-center {
+	@include flex();
+}

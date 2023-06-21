@@ -1,0 +1,58 @@
+header > nav > a {
+	--font-size: 1rem;
+	--font-weight: 600;
+
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--color-text);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+	letter-spacing: 1px;
+
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: -8px;
+		translate: -50% 0;
+		width: 0%;
+		height: 2px;
+		border-radius: 2px;
+		background-color: var(--color-text);
+
+		transition: width var(--transition-duration-off) ease;
+	}
+
+	&:hover::before {
+		width: 100%;
+		transition: width var(--transition-duration-on) ease;
+	}
+}
+
+input.text {
+	outline: 0;
+}
+
+span.hg-text {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: -8px;
+		transform: translateX(-50%);
+		width: 0%;
+		height: 2px;
+		background-color: black;
+
+		transition: width var(--transition-duration-off) ease;
+	}
+
+	&:hover::before {
+		width: 100%;
+		transition: width var(--transition-duration-on) ease;
+	}
+}
