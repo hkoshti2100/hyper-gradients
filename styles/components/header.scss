@@ -8,8 +8,6 @@ header {
 	--icon-size: #{rem(22.5px)};
 	--gap-nav: 1.25rem;
 	--gap-icon: 1.5rem;
-	--transition-duration-on: 250ms;
-	--transition-duration-off: calc(var(--transition-duration-on) * 2);
 
 	padding: var(--padding);
 	@include flex(space-between);
@@ -91,6 +89,7 @@ header .icon-header {
 
 #nav-mobile {
 	padding: 0 calc((100vw - min(1440px, 90vw)) * 0.5);
+	background-color: white;
 
 	> .header {
 		height: calc(var(--header-logo-height) + var(--header-padding-block) * 2);

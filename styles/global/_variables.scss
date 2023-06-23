@@ -28,9 +28,11 @@
 	--focus-fx-color: var(--color-text);
 	--focus-fx-alignX: 50%;
 
-	--header-logo-height: 45px;
+	--header-logo-height: 40px;
 	--header-padding-block: 20px;
 
+	--transition-duration-on: 250ms;
+	--transition-duration-off: calc(var(--transition-duration-on) * 2);
 	
 	// ---------------- layout ----------------
 	// 280px

@@ -1,0 +1,92 @@
+@use "../global/mixins" as *;
+
+main {
+	@include flex(flex-start);
+}
+
+#section-hero {
+	--section-hero-width: max(60%, 600px);
+
+	--h1-size: 3rem;
+	--h1-weight: 700;
+	--h1-space: 1em;
+
+	--p-size: 1.25rem;
+	--p-weight: 500;
+	--p-leading: 1.75;
+	--p-space: 2em;
+
+	--btn-size: 1rem;
+	--btn-weight: 600;
+	--btn-padding: 1em 4em;
+	--btn-gap-col: 40px;
+	--btn-gap-row: 10px;
+	--btn-shadow-primary: 5px 5px 20px var(--color-text);
+	--btn-shadow-outline: inset 5px 5px 20px #00000080;
+
+
+	width: var(--section-hero-width);
+
+	> h1 {
+		margin-bottom: var(--h1-space);
+
+		font-size: var(--h1-size);
+		font-weight: var(--h1-weight);
+	}
+
+	> p {
+		margin-bottom: var(--p-space);
+
+		font-size: var(--p-size);
+		font-weight: var(--p-weight);
+		line-height: var(--p-leading);
+	}
+
+	> .hero-links {
+		@include flex(flex-start);
+		flex-wrap: wrap;
+		gap: var(--btn-gap-row) var(--btn-gap-col);
+	}
+
+	a.hg-btn {
+		display: inline-block;
+
+		color: var(--color-text);
+		text-decoration: none;
+		letter-spacing: 1px;
+		font-size: var(--btn-size);
+		font-weight: var(--btn-weight);
+	
+		padding: var(--btn-padding);
+		border-radius: 100vmax;
+	
+		&.primary {
+			color: var(--color-bg);
+			background-color: var(--color-text);
+
+			transition: box-shadow var(--transition-duration-off);
+			
+			&:hover,
+			&:focus-visible {
+				--btn-padding: 1em 4em;
+				box-shadow: var(--btn-shadow-primary);
+
+				transition: box-shadow var(--transition-duration-on);
+			}
+		}
+
+		&.outline {
+			@include inset-border(2px, var(--color-text));
+
+			transition: box-shadow var(--transition-duration-off);
+
+			&:hover,
+			&:focus-visible {
+				--btn-padding: 1em 4em;
+				box-shadow: var(--btn-shadow-outline);
+
+				transition: box-shadow var(--transition-duration-on);
+			}
+		}
+	}
+}
