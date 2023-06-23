@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat/Montserrat-Variable.ttf") format("truetype-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat/Montserrat-Italic-Variable.ttf") format("truetype-variations");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --color-text: black;
+  --color-bg: white;
+  --font-primary: "Montserrat";
+  --focus-fx-stroke: 2px;
+  --focus-fx-offset: -8px;
+  --focus-fx-color: var(--color-text);
+  --focus-fx-alignX: 50%;
+  --header-logo-height: 45px;
+  --header-padding-block: 20px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: var(--font-primary);
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container-main {
+  width: min(1440px, 90%);
+  margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile {
+  display: none;
+}
+
+.hg-pointer {
+  cursor: pointer;
+}
+
+input.text, button {
+  border: 0;
+  background-color: transparent;
+}
+
+a.hg-link::before, input.text + span {
+  left: var(--focus-fx-alignX);
+  bottom: var(--focus-fx-offset);
+  transform: translateX(calc(var(--focus-fx-alignX) * -1));
+  width: 0%;
+  height: var(--focus-fx-stroke);
+  border-radius: var(--focus-fx-stroke);
+  background-color: var(--focus-fx-color);
+  transition: width var(--transition-duration-off);
+}
+
+a.hg-link:hover::before, a.hg-link:focus::before, input.text:focus-visible + span, input.text:hover + span {
+  width: 100%;
+  transition: width var(--transition-duration-on);
+}
+
+a.hg-link {
+  position: relative;
+}
+a.hg-link::before {
+  content: "";
+  position: absolute;
+}
+span.hg-input-text {
+  position: relative;
+}
+
+input.text + span {
+  position: absolute;
+}
+button.hg-icon {
+  --hover-scale: 1.25;
+}
+button.hg-icon > svg {
+  will-change: scale;
+  transition: scale var(--transition-duration-on);
+}
+button.hg-icon:focus-visible > svg, button.hg-icon:hover > svg {
+  scale: var(--hover-scale);
+}
+
+a.hg-link-icon {
+  --hover-scale: 1.25;
+}
+a.hg-link-icon > svg {
+  will-change: scale;
+  transition: scale var(--transition-duration-on);
+}
+a.hg-link-icon:focus-visible > svg, a.hg-link-icon:hover > svg {
+  scale: var(--hover-scale);
+}

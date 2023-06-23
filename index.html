@@ -6,7 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hyper Gradients</title>
 	<link rel="stylesheet" href="lib/normalize.css">
-	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/components/header.css">
+	<link rel="stylesheet" href="styles/components/main.css">
 </head>
 <body>
 	<header class="container-main">
@@ -24,13 +26,13 @@
 			</a>
 		</div>
 		<nav>
-			<a href="">Home</a>
-			<a href="">About</a>
-			<a href="">More</a>
-			<a href="">Contribute</a>
+			<a href="" class="hg-link">Home</a>
+			<a href="" class="hg-link">About</a>
+			<a href="" class="hg-link">More</a>
+			<a href="" class="hg-link">Contribute</a>
 		</nav>
 		<div class="share-search">
-			<button class="share flex-center no-form">
+			<button class="share hg-icon hg-pointer flex-center">
 				<svg class="icon-header"
 					xmlns="http://www.w3.org/2000/svg"
 					x="0px" y="0px" viewBox="0 0 360 360">
@@ -40,7 +42,7 @@
 				</svg>
 			</button>
 			<form action="" class="search flex-center">
-				<button type="submit" class="no-form flex-center">
+				<button type="submit" class="hg-icon hg-pointer flex-center">
 					<svg class="icon-header"
 						xmlns="http://www.w3.org/2000/svg"
 						x="0px" y="0px" viewBox="0 0 360 360">
@@ -49,18 +51,107 @@
 					
 					</svg>
 				</button>
-				<span class="hg-text">
-					<input type="text" name="hg-search" id="" class="no-form text" placeholder="Search Hyper Gradients...">
+				<span class="hg-input-text">
+					<input type="text" name="hg-search" id="" class="text" placeholder="Search Hyper Gradients...">
+					<span></span>
 				</span>
 			</form>
+			<button class="hamburger-menu mobile hg-icon hg-pointer flex-center">
+				<svg class="icon-header"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 100 100">
+				
+					<g>
+						<rect y="85" width="100" height="15" rx="7.5"/>
+						<rect y="42.5" width="100" height="15" rx="7.5"/>
+						<rect width="100" height="15" rx="7.5"/>
+					</g>
+				</svg>
+			</button>
 		</div>
 	</header>
-	<main>
+	<main class="container-main">
 
 	</main>
-	<footer>
+	<footer class="container-main">
 
 	</footer>
+
+	<!-- fixed elements -->
+	<div id="nav-mobile-backdrop"></div>
+	<div id="nav-mobile">
+		<div class="header">
+			<button class="hg-icon hg-pointer flex-center">
+				<svg class="icon-mobile"
+					xmlns="http://www.w3.org/2000/svg"
+					x="0px" y="0px" viewBox="0 0 100 100">
+
+					<path d="M85.4,85.4c-1.5,1.5-3.4,2.2-5.3,2.2s-3.8-0.7-5.3-2.2L50,60.6L25.2,85.4c-2.9,2.9-7.7,2.9-10.6,0c-1.5-1.5-2.2-3.4-2.2-5.3 s0.7-3.8,2.2-5.3L39.4,50L14.6,25.2c-2.9-2.9-2.9-7.7,0-10.6c1.5-1.5,3.4-2.2,5.3-2.2s3.8,0.7,5.3,2.2L50,39.4l24.8-24.8 c2.9-2.9,7.7-2.9,10.6,0c1.5,1.5,2.2,3.4,2.2,5.3c0,1.9-0.7,3.8-2.2,5.3L60.6,50l24.8,24.8C88.3,77.7,88.3,82.4,85.4,85.4z"/>
+					
+				</svg>
+			</button>
+		</div>
+		<div class="main">
+			<div class="mobile-search">
+				<form action="" class="search flex-center">
+					<button type="submit" class="hg-icon hg-pointer flex-center">
+						<svg class="icon-mobile"
+							xmlns="http://www.w3.org/2000/svg"
+							x="0px" y="0px" viewBox="0 0 360 360">
+			
+							<path d="M264.2,232.7c47.7-65.1,33.6-156.7-31.5-204.4S76-5.3,28.3,59.8S-5.3,216.5,59.8,264.2c51.5,37.7,121.5,37.7,173-0.1h0 c0.7,0.9,1.4,1.8,2.2,2.6l86.6,86.6c8.8,8.8,23,8.8,31.8,0c8.8-8.8,8.8-23,0-31.8l-86.6-86.6C266,234.1,265.1,233.4,264.2,232.7 L264.2,232.7z M270,146.2c0,68.3-55.4,123.7-123.7,123.7S22.5,214.6,22.5,146.2S77.9,22.5,146.3,22.5S270,77.9,270,146.2z"/>
+			
+						</svg>
+					</button>
+					<span class="hg-input-text">
+						<input type="text" name="hg-search" id="" class="text" placeholder="Search Hyper Gradients...">
+						<span></span>
+					</span>
+				</form>
+			</div>
+			<div class="nav-mobile-links">
+				<a href="" class="hg-link">Home</a>
+				<a href="" class="hg-link">About</a>
+				<a href="" class="hg-link">More</a>
+				<a href="" class="hg-link">Contribute</a>
+			</div>
+			<div class="mobile-share">
+				<a href="" class="hg-link-icon">
+					<svg class="icon-mobile"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 100 99.9944">
+			
+						<g>
+							<path d="M82.6917,23.3139a6.007,6.007,0,1,0-6.0056,5.9944,6.0081,6.0081,0,0,0,6.0056-5.9944" transform="translate(0 -0.0028)"/>
+							<path d="M90.6944,70.2056a27.9419,27.9419,0,0,1-1.7138,9.2833,15.4429,15.4429,0,0,1-3.7528,5.75,15.27,15.27,0,0,1-5.7417,3.73,27.7929,27.7929,0,0,1-9.2944,1.7362c-5.2695.2333-6.8334.28-20.1973.28-13.3527,0-14.9277-.05-20.1972-.28a27.76,27.76,0,0,1-9.28-1.7362,15.3,15.3,0,0,1-5.75-3.73,15.2539,15.2539,0,0,1-3.7445-5.75,27.5072,27.5072,0,0,1-1.7139-9.2833c-.2555-5.27-.3027-6.8584-.3027-20.1945,0-13.3667.0472-14.9389.3027-20.2111a27.8536,27.8536,0,0,1,1.7139-9.2972,15.2006,15.2006,0,0,1,3.7445-5.7389,15.4963,15.4963,0,0,1,5.75-3.7417,27.7492,27.7492,0,0,1,9.2805-1.7278c5.2695-.2333,6.8445-.2916,20.1972-.2916,13.3667,0,14.9278.0583,20.1973.2916a27.8718,27.8718,0,0,1,9.2944,1.7278,15.4549,15.4549,0,0,1,5.7417,3.7417,15.4229,15.4229,0,0,1,3.7528,5.7389A28.06,28.06,0,0,1,90.6944,29.8c.2445,5.2694.3028,6.8444.3028,20.2111,0,13.3361-.0583,14.9222-.3028,20.1945Zm9.0028-40.8167A36.3657,36.3657,0,0,0,97.3639,17.25,25.4982,25.4982,0,0,0,82.7528,2.625,36.4029,36.4029,0,0,0,70.6139.3083C65.2833.05,63.5806.0028,49.9944.0028,36.4222.0028,34.7056.05,29.375.3056A36.6775,36.6775,0,0,0,17.2361,2.6222,24.6481,24.6481,0,0,0,8.3972,8.3833,24.5709,24.5709,0,0,0,2.625,17.25,36.9183,36.9183,0,0,0,.2917,29.3889C.0583,34.7194,0,36.4222,0,50.0083c0,13.5723.0583,15.275.2917,20.6056A37.1308,37.1308,0,0,0,2.625,82.7528a24.5369,24.5369,0,0,0,5.7722,8.85,24.6443,24.6443,0,0,0,8.8389,5.7722A36.8837,36.8837,0,0,0,29.375,99.6944c5.3306.2445,7.0444.3028,20.6194.3028,13.5862,0,15.2889-.0583,20.62-.3028A36.7894,36.7894,0,0,0,82.7528,97.375,25.588,25.588,0,0,0,97.3639,82.7528a36.5,36.5,0,0,0,2.3333-12.1389c.2445-5.3306.3028-7.0333.3028-20.6056,0-13.5861-.0583-15.2889-.3028-20.6194Z" transform="translate(0 -0.0028)"/>
+							<path d="M49.9944,66.6611A16.6653,16.6653,0,1,1,66.6722,50.0083,16.6585,16.6585,0,0,1,49.9944,66.6611Zm0-42.3444A25.6792,25.6792,0,1,0,75.6722,50.0083,25.6813,25.6813,0,0,0,49.9944,24.3167Z"/>
+						</g>
+			
+					</svg>
+				</a>
+				<a href="" class="hg-link-icon">
+					<svg class="icon-mobile"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 100 81.2579">
+			
+						<path d="M89.7611,29.6012c.0611.8805.0611,1.7639.0611,2.6528,0,27.1083-20.6389,58.375-58.375,58.375v-.0167A58.0585,58.0585,0,0,1,0,81.4151a42.2207,42.2207,0,0,0,4.8833.2972,41.1967,41.1967,0,0,0,25.4806-8.8A20.5412,20.5412,0,0,1,11.1972,58.6651a20.4341,20.4341,0,0,0,9.2639-.3528A20.5182,20.5182,0,0,1,4.0028,38.204v-.2611A20.3778,20.3778,0,0,0,13.3139,40.51a20.54,20.54,0,0,1-6.35-27.3944A58.2355,58.2355,0,0,0,49.2472,34.5484,20.537,20.537,0,0,1,84.2111,15.8345,41.1574,41.1574,0,0,0,97.2389,10.854a20.5828,20.5828,0,0,1-9.02,11.3472A40.8527,40.8527,0,0,0,100,18.9706,41.68,41.68,0,0,1,89.7611,29.6012Z" transform="translate(0 -9.371)"/>
+			
+					</svg>
+				</a>
+				<a href="" class="hg-link-icon">
+					<svg class="icon-mobile"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 100 99.991">
+			
+						<g>
+							<path d="M20.3292,41.3426,7.9371,53.7348A27.0989,27.0989,0,0,0,46.2607,92.0584h0l16.5108-16.52a27.0966,27.0966,0,0,0-7.4786-43.6074L50,37.224a9.0525,9.0525,0,0,0-1.391,1.7974,18.0644,18.0644,0,0,1,7.7768,30.14L39.8839,85.6727A18.0745,18.0745,0,0,1,14.3228,60.1115l7.1626-7.1535a36.2894,36.2894,0,0,1-1.1561-11.6244Z" transform="translate(0 -0.0045)"/>
+							<path d="M37.2285,24.4524A27.0967,27.0967,0,0,0,44.7071,68.06l7-7.009a18.0644,18.0644,0,0,1-8.0929-30.2217L60.1161,14.3183A18.0744,18.0744,0,0,1,85.6772,39.8794h0l-7.1626,7.1535a36.3393,36.3393,0,0,1,1.1562,11.6245L92.0629,46.2652A27.0989,27.0989,0,0,0,53.7393,7.9416Z" transform="translate(0 -0.0045)"/>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
 
 	<script src="lib/jquery.min.js"></script>
 	<script src="scripts/index.js"></script>

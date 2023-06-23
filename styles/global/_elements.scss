@@ -1,58 +1,71 @@
-header > nav > a {
-	--font-size: 1rem;
-	--font-weight: 600;
+@use "classes" as *;
 
-	text-decoration: none;
-	text-transform: uppercase;
-	color: var(--color-text);
-	font-size: var(--font-size);
-	font-weight: var(--font-weight);
-	letter-spacing: 1px;
-
+// ---------------- UI Links ----------------
+a.hg-link {
 	position: relative;
 
 	&::before {
 		content: "";
 		position: absolute;
-		left: 50%;
-		bottom: -8px;
-		translate: -50% 0;
-		width: 0%;
-		height: 2px;
-		border-radius: 2px;
-		background-color: var(--color-text);
-
-		transition: width var(--transition-duration-off) ease;
+		@extend %stroke-fx-initial;
 	}
 
-	&:hover::before {
-		width: 100%;
-		transition: width var(--transition-duration-on) ease;
+	&:hover::before,
+	&:focus::before {
+		@extend %stroke-fx-active;
 	}
+}
+
+// ---------------- UI Form Resets ----------------
+input.text, button {
+	@extend %ui-form-reset;
+}
+
+// ---------------- UI  Elements ----------------
+span.hg-input-text {
+	position: relative;
 }
 
 input.text {
-	outline: 0;
-}
-
-span.hg-text {
-	position: relative;
-
-	&::before {
-		content: "";
+	& + span {
 		position: absolute;
-		left: 50%;
-		bottom: -8px;
-		transform: translateX(-50%);
-		width: 0%;
-		height: 2px;
-		background-color: black;
-
-		transition: width var(--transition-duration-off) ease;
+		@extend %stroke-fx-initial;
 	}
 
-	&:hover::before {
-		width: 100%;
-		transition: width var(--transition-duration-on) ease;
+	&:focus-visible + span,
+	&:hover + span {
+		@extend %stroke-fx-active;
+	}
+}
+
+button.hg-icon {
+	--hover-scale: 1.25;
+
+	& > svg {
+		will-change: scale;
+		transition: scale var(--transition-duration-on);
+	}
+
+	&:focus-visible,
+	&:hover {
+		> svg {
+			scale: var(--hover-scale);
+		}
+	}
+}
+
+a.hg-link-icon {
+	--hover-scale: 1.25;
+
+	& > svg {
+		will-change: scale;
+		transition: scale var(--transition-duration-on);
+	}
+
+	&:focus-visible,
+	&:hover {
+		> svg {
+			scale: var(--hover-scale);
+		}
 	}
 }

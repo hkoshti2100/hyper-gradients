@@ -21,6 +21,16 @@
 	// --font-monospace: ;
 	// --font-script: ;
 	// --font-display: ;
+
+	// ---------------- UI ----------------
+	--focus-fx-stroke: 2px;
+	--focus-fx-offset: -8px;
+	--focus-fx-color: var(--color-text);
+	--focus-fx-alignX: 50%;
+
+	--header-logo-height: 45px;
+	--header-padding-block: 20px;
+
 	
 	// ---------------- layout ----------------
 	// 280px

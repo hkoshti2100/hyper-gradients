@@ -1,9 +1,9 @@
-$font-directory: "../assets/fonts";
+$font-directory: "../assets/fonts/";
 
 // @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
-	$font-path: $font-directory + "/montserrat/";
+	$font-path: $font-directory + "montserrat/";
 
 	font-family: "Montserrat";
 	src: url($font-path + "Montserrat-Variable.ttf") format("truetype-variations");
@@ -13,7 +13,7 @@ $font-directory: "../assets/fonts";
 }
 
 @font-face {
-	$font-path: $font-directory + "/montserrat/";
+	$font-path: $font-directory + "montserrat/";
 
 	font-family: "Montserrat";
 	src: url($font-path + "Montserrat-Italic-Variable.ttf") format("truetype-variations");
